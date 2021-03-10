@@ -71,6 +71,7 @@ namespace PomodoroTimer
 
         private void OnStartClick(object sender, RoutedEventArgs e)
         {
+            Timer.Stop();
             Timer.Start();
         }
 

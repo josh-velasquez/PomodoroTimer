@@ -1,0 +1,17 @@
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\bin\Release\PomodoroTimer.exe.config
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\bin\Release\PomodoroTimer.exe
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\bin\Release\PomodoroTimer.pdb
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\MainWindow.baml
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\MainWindow.g.cs
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\Success.g.cs
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\App.g.cs
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer_Content.g.cs
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer_MarkupCompile.cache
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer_MarkupCompile.lref
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\Success.baml
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.g.resources
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.Properties.Resources.resources
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.csproj.GenerateResource.cache
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.csproj.CoreCompileInputs.cache
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.exe
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.pdb

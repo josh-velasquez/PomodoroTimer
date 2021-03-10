@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pomodoro.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -103,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="alarm.mp3" />
+    <Resource Include="pomodoro.ico" />
     <None Include="Resources\alarm.wav" />
     <None Include="Resources\alarm.mp3" />
   </ItemGroup>

@@ -13,3 +13,6 @@ F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Debug\Pomo
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Debug\PomodoroTimer.csproj.CoreCompileInputs.cache
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Debug\PomodoroTimer.exe
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Debug\PomodoroTimer.pdb
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Debug\PomodoroTimer_Content.g.cs
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Debug\Success.g.cs
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Debug\Success.baml

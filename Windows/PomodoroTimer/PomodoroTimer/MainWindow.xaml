@@ -5,10 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PomodoroTimer"
         mc:Ignorable="d"
-        Title="PomodoroTimer" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="394,10,0,0" VerticalAlignment="Top" Width="74"/>
-        <TextBlock x:Name="TimerTextBlock" TextAlignment="Center" FontSize="70" TextWrapping="Wrap" Text="00:00:00" FontFamily="Segoe UI Light" Height="187" Width="331"/>
+        WindowStartupLocation="CenterScreen"
+        Title="PomodoroTimer" Height="256.5" Width="412.332">
+    <Grid Background="#FF8ECAE6">
+        <Button Content="Start" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Width="375" Height="23" Click="OnStartClick" Background="#FF52B788"/>
+        <Button Content="Work" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Width="90" Click="OnWorkClick" Background="#FFFFB703"/>
+        <Button Content="Small Break" HorizontalAlignment="Left" Margin="105,130,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.167,-3.65" Click="OnSmallBreakClick" Background="#FFFFB703"/>
+        <Button Content="Big Break" HorizontalAlignment="Left" Margin="200,130,0,0" VerticalAlignment="Top" Width="90" Click="OnBigBreakClick" Background="#FFFFB703"/>
+        <Button Content="Pause" HorizontalAlignment="Left" Margin="10,183,0,0" VerticalAlignment="Top" Width="375" Click="OnPauseClick" Background="#FFEF476F"/>
+        <TextBlock x:Name="TimerTextBlock" TextAlignment="Center" Margin="10,10,19,0" TextWrapping="Wrap" FontSize="70" Text="00:00" VerticalAlignment="Top" Height="115" Background="#FF219EBC" Foreground="#FF023047"/>
+        <Button Content="Custom" HorizontalAlignment="Left" Margin="295,130,0,0" VerticalAlignment="Top" Width="90" Click="OnCustomClick" Background="#FFFFB703"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="80" Margin="204,23,0,0"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="75" VerticalAlignment="Top" Width="78" Margin="114,23,0,0"/>
 
     </Grid>
 </Window>

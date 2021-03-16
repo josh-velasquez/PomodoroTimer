@@ -6,9 +6,9 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize"
-        Title="Pomodoro Timer" Height="285.833" Width="410.332">
+        Title="Pomodoro Timer" Height="291.833" Width="410.332">
     <Grid Background="#FF353A40">
-        <Button Content="Start" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top"  Width="375" Height="30" Click="OnStartClick" Background="#FF4EDC61" Foreground="White">
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top"  Width="375" Height="30" Click="OnStartClick" Background="#FF4EDC61" Foreground="White">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">

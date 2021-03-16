@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Debug\
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\
 PomodoroTimer
 none
 false
-DEBUG;TRACE
+TRACE
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\App.xaml
 2-1277061367
 153270466
-6-436681751
+7-1514260583
 13-1505183044
 MainWindow.xaml;Success.xaml;
 

@@ -15,3 +15,4 @@ F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\Po
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.csproj.CoreCompileInputs.cache
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.exe
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.pdb
+F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.csprojAssemblyReference.cache

@@ -7,7 +7,6 @@ F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\Su
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\App.g.cs
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer_Content.g.cs
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer_MarkupCompile.cache
-F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer_MarkupCompile.lref
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\Success.baml
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.g.resources
 F:\Repositories\PomodoroTimer\Windows\PomodoroTimer\PomodoroTimer\obj\Release\PomodoroTimer.Properties.Resources.resources

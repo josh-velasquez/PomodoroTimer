@@ -8,7 +8,7 @@
         Closing="OnCloseWindow"
         Title="Success" Height="194" Width="228.5">
     <Grid Background="#FF353A40">
-        <Label x:Name="MessageBox" Content="Done! " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="65" Width="192" Foreground="White" FontSize="20" />
+
         <Button Content="5 more minutes" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top"  Width="192" Height="30" Click="OnMoreMinutesClick" Background="#FF4EDC61" Foreground="White">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -59,5 +59,6 @@
                 </Style>
             </Button.Style>
         </Button>
+        <TextBlock x:Name="MessageBox" HorizontalAlignment="Left" TextWrapping="WrapWithOverflow" Margin="10,9,0,0" Text="Done!" VerticalAlignment="Top" Height="66" Width="192" Foreground="White" FontFamily="Calibri" FontSize="22" />
     </Grid>
 </Window>

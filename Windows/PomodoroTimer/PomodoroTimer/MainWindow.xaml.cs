@@ -35,18 +35,24 @@ namespace PomodoroTimer
             }
             else
             {
-                if (WindowState == WindowState.Minimized)
-                {
-                    WindowState = WindowState.Normal;
-                }
-                Activate();
-                Timer.Stop();
-                player = new SoundPlayer(Properties.Resources.alarm);
-                player.PlayLooping();
-                success = new Success(player, timerType);
-                success.Show();
-                success.UpdateNewTime += UpdateNewTime;
+                TimerFinished();
             }
+        }
+
+        private void TimerFinished()
+        {
+            if (WindowState == WindowState.Minimized)
+            {
+                WindowState = WindowState.Normal;
+            }
+            Activate();
+            Timer.Stop();
+            player = new SoundPlayer(Properties.Resources.alarm);
+            player.PlayLooping();
+            success = new Success(player, timerType);
+            success.Show();
+            success.UpdateNewTime += UpdateNewTime;
+            StartButton.IsEnabled = true;
         }
 
         private void UpdateNewTime(object sender, EventArgs e)
@@ -66,22 +72,6 @@ namespace PomodoroTimer
             Timer.Stop();
             time = 1500;
             SetTimerType(TimerType.Work);
-            UpdateTime();
-        }
-
-        private void OnSmallBreakClick(object sender, RoutedEventArgs e)
-        {
-            Timer.Stop();
-            time = 300;
-            SetTimerType(TimerType.ShortBreak);
-            UpdateTime();
-        }
-
-        private void OnBigBreakClick(object sender, RoutedEventArgs e)
-        {
-            Timer.Stop();
-            time = 1800;
-            SetTimerType(TimerType.LongBreak);
             UpdateTime();
         }
 
@@ -119,6 +109,27 @@ namespace PomodoroTimer
         private void SetTimerType(TimerType type)
         {
             timerType = type;
+        }
+
+        private void OnCloseParentWindow(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void OnLongBreakClick(object sender, RoutedEventArgs e)
+        {
+            Timer.Stop();
+            time = 1800;
+            SetTimerType(TimerType.LongBreak);
+            UpdateTime();
+        }
+
+        private void OnShortBreakClick(object sender, RoutedEventArgs e)
+        {
+            Timer.Stop();
+            time = 300;
+            SetTimerType(TimerType.ShortBreak);
+            UpdateTime();
         }
     }
 }

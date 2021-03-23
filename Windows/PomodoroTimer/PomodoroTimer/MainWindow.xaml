@@ -6,9 +6,10 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize"
+        Closing="OnCloseParentWindow"
         Title="Pomodoro Timer" Height="291.833" Width="410.332">
-    <Grid Background="#FF353A40">
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top"  Width="375" Height="30" Click="OnStartClick" Background="#FF4EDC61" Foreground="White">
+    <Grid Background="#FF264653">
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top"  Width="375" Height="30" Click="OnStartClick" Background="#FF2A9D8F" Foreground="White">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -19,7 +20,7 @@
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#FF349B42" TargetName="Border" />
+                                        <Setter Property="Background" Value="#219ebc" TargetName="Border" />
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
@@ -33,7 +34,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Work" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="OnWorkClick" Background="#FFFFB703" Foreground="White">
+        <Button Content="Work" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="OnWorkClick" Background="#FFF4A261" Foreground="White">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -44,7 +45,7 @@
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#FFAE7C00" TargetName="Border" />
+                                        <Setter Property="Background" Value="#219ebc" TargetName="Border" />
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
@@ -58,7 +59,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Small Break" HorizontalAlignment="Left" Margin="105,141,0,0" VerticalAlignment="Top" Height="30" Width="90" RenderTransformOrigin="0.167,-3.65" Click="OnSmallBreakClick" Background="#FFFFB703" Foreground="White">
+        <Button Content="Short Break" HorizontalAlignment="Left" Margin="105,141,0,0" VerticalAlignment="Top" Height="30" Width="90" RenderTransformOrigin="0.167,-3.65" Click="OnShortBreakClick" Background="#FFF4A261" Foreground="White">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -69,7 +70,7 @@
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#FFAE7C00" TargetName="Border" />
+                                        <Setter Property="Background" Value="#219ebc" TargetName="Border" />
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
@@ -83,7 +84,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Big Break" HorizontalAlignment="Left" Margin="200,141,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="OnBigBreakClick" Background="#FFFFB703" Foreground="White">
+        <Button Content="Long Break" HorizontalAlignment="Left" Margin="200,141,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="OnLongBreakClick" Background="#FFF4A261" Foreground="White">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -94,7 +95,7 @@
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#FFAE7C00" TargetName="Border" />
+                                        <Setter Property="Background" Value="#219ebc" TargetName="Border" />
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
@@ -108,7 +109,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Content="Pause" HorizontalAlignment="Left" Margin="10,211,0,0" VerticalAlignment="Top" Width="375" Height="30" Click="OnPauseClick" Background="#FFE84949" Foreground="White">
+        <Button Content="Pause" HorizontalAlignment="Left" Margin="10,211,0,0" VerticalAlignment="Top" Width="375" Height="30" Click="OnPauseClick" Background="#FFE9C46A" Foreground="White">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -119,7 +120,7 @@
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#FFA23030" TargetName="Border" />
+                                        <Setter Property="Background" Value="#219ebc" TargetName="Border" />
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>
@@ -133,8 +134,8 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <TextBlock x:Name="TimerTextBlock" TextAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" FontSize="85" Text="00:00" VerticalAlignment="Top" Height="126" Background="#FFFF85A1" Foreground="#FF023047" HorizontalAlignment="Left" Width="375" />
-        <Button Content="Custom Break" HorizontalAlignment="Left" Margin="295,141,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="OnCustomClick" Background="#FFFFB703" Foreground="White">
+        <TextBlock x:Name="TimerTextBlock" TextAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" FontSize="85" Text="00:00" VerticalAlignment="Top" Height="126" Background="#FFE76F51" Foreground="#FF023047" HorizontalAlignment="Left" Width="375" />
+        <Button Content="Custom Break" HorizontalAlignment="Left" Margin="295,141,0,0" VerticalAlignment="Top" Height="30" Width="90" Click="OnCustomClick" Background="#FFF4A261" Foreground="White" IsEnabled="False">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Template">
@@ -145,7 +146,7 @@
                                 </Border>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#FFAE7C00" TargetName="Border" />
+                                        <Setter Property="Background" Value="#219ebc" TargetName="Border" />
                                     </Trigger>
                                 </ControlTemplate.Triggers>
                             </ControlTemplate>

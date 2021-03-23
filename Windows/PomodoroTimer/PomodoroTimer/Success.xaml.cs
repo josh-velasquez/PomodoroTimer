@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Media;
 using System.Windows;
 
@@ -21,19 +20,22 @@ namespace PomodoroTimer
             InitializeComponent();
             Topmost = true;
             this.player = player;
-            switch(timerType)
+            switch (timerType)
             {
                 case TimerType.LongBreak:
-                    MessageBox.Content = "Long break time is over. Time to get back to work!";
+                    MessageBox.Text = "Long break time is over. Time to get back to work!";
                     break;
+
                 case TimerType.ShortBreak:
-                    MessageBox.Content = "Short break time is over. Time to get back to work!";
+                    MessageBox.Text = "Short break time is over. Time to get back to work!";
                     break;
+
                 case TimerType.Work:
-                    MessageBox.Content = "Work time is over. Take a break!";
+                    MessageBox.Text = "Work time is over. Take a break!";
                     break;
+
                 default:
-                    MessageBox.Content = "Done!";
+                    MessageBox.Text = "Done!";
                     break;
             }
         }

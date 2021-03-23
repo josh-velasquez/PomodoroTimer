@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Media;
 using System.Windows;
 using System.Windows.Threading;
@@ -14,6 +13,9 @@ namespace PomodoroTimer
         private int time = 0;
         private DispatcherTimer Timer;
         private SoundPlayer player = null;
+        private Success success = null;
+
+        private TimerType timerType;
 
         public MainWindow()
         {
@@ -41,11 +43,17 @@ namespace PomodoroTimer
                 Timer.Stop();
                 player = new SoundPlayer(Properties.Resources.alarm);
                 player.PlayLooping();
-                Success success = new Success(player);
+                success = new Success(player, timerType);
                 success.Show();
-                // Listen to when this invoked... once invoked then close then update the time!
-                success.NewTime += value => time = value;
+                success.UpdateNewTime += UpdateNewTime;
             }
+        }
+
+        private void UpdateNewTime(object sender, EventArgs e)
+        {
+            time = success.NewTime;
+            UpdateTime();
+            StartTimer();
         }
 
         private void UpdateTime()
@@ -57,6 +65,7 @@ namespace PomodoroTimer
         {
             Timer.Stop();
             time = 1500;
+            SetTimerType(TimerType.Work);
             UpdateTime();
         }
 
@@ -64,6 +73,7 @@ namespace PomodoroTimer
         {
             Timer.Stop();
             time = 300;
+            SetTimerType(TimerType.ShortBreak);
             UpdateTime();
         }
 
@@ -71,10 +81,16 @@ namespace PomodoroTimer
         {
             Timer.Stop();
             time = 1800;
+            SetTimerType(TimerType.LongBreak);
             UpdateTime();
         }
 
         private void OnStartClick(object sender, RoutedEventArgs e)
+        {
+            StartTimer();
+        }
+
+        private void StartTimer()
         {
             if (time != 0)
             {
@@ -96,7 +112,13 @@ namespace PomodoroTimer
         {
             Timer.Stop();
             time = 5;
+            SetTimerType(TimerType.Custom);
             UpdateTime();
+        }
+
+        private void SetTimerType(TimerType type)
+        {
+            timerType = type;
         }
     }
 }

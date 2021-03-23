@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Media;
 using System.Windows;
 
@@ -11,56 +12,54 @@ namespace PomodoroTimer
     {
         private SoundPlayer player = null;
 
-        public event Action<int> NewTime;
+        public event EventHandler UpdateNewTime;
 
-        public Success(SoundPlayer player)
+        public int NewTime = 0;
+
+        public Success(SoundPlayer player, TimerType timerType)
         {
             InitializeComponent();
             Topmost = true;
             this.player = player;
-        }
-
-        private void OnTakeABreakClick(object sender, RoutedEventArgs e)
-        {
-            if (NewTime != null)
+            switch(timerType)
             {
-                NewTime(300);
-                CloseWindow();
+                case TimerType.LongBreak:
+                    MessageBox.Content = "Long break time is over. Time to get back to work!";
+                    break;
+                case TimerType.ShortBreak:
+                    MessageBox.Content = "Short break time is over. Time to get back to work!";
+                    break;
+                case TimerType.Work:
+                    MessageBox.Content = "Work time is over. Take a break!";
+                    break;
+                default:
+                    MessageBox.Content = "Done!";
+                    break;
             }
         }
 
         private void OnMoreMinutesClick(object sender, RoutedEventArgs e)
         {
-            if (NewTime != null)
-            {
-                NewTime(300);
-                CloseWindow();
-            }
+            NewTime = 300;
+            CloseWindow(e);
         }
 
         private void OnStopAlarmClick(object sender, RoutedEventArgs e)
         {
             StopPlayer();
+            CloseWindow(e);
         }
 
-        private void OnTakeALongBreakClick(object sender, RoutedEventArgs e)
-        {
-            if (NewTime != null)
-            {
-                NewTime(1800);
-                CloseWindow();
-            }
-        }
-
-        private void CloseWindow()
+        private void CloseWindow(EventArgs e)
         {
             StopPlayer();
-            //Environment.Exit(0);
+            UpdateNewTime.Invoke(this, e);
+            Hide();
         }
 
         private void OnCloseWindow(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            CloseWindow();
+            CloseWindow(e);
         }
 
         private void StopPlayer()
